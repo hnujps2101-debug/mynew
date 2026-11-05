@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FFF9F5">
+  <meta name="description" content="林小满的个人网站 —— 产品设计师 & 前端开发者，这里放着我做过的作品和一点关于我的事。">
+  <title>林小满 · 个人网站</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- 顶部滚动进度条 -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- 背景渐变光斑：纯 CSS 绘制，不依赖任何外部图片 -->
+  <div class="bg-decor" aria-hidden="true">
+    <span class="blob blob-a"></span>
+    <span class="blob blob-b"></span>
+    <span class="blob blob-c"></span>
+    <span class="blob blob-d"></span>
+    <span class="grain"></span>
+  </div>
+
+  <!-- ============ 导航 ============ -->
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="回到首页">
+        <span class="brand-mark">✦</span>
+        <!-- 修改这里：网站上的名字 -->
+        <span class="brand-name">林小满<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#skills">技能</a>
+        <a href="#works">作品</a>
+        <a href="#journey">经历</a>
+        <a href="#contact">联系</a>
+      </nav>
+
+      <a class="nav-cta" href="#contact">聊聊 <span aria-hidden="true">↗</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="展开菜单" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ Hero ============ -->
+    <section class="hero section-shell" aria-labelledby="heroTitle">
+      <div class="hero-copy hero-enter">
+        <span class="pill-badge"><span class="badge-dot"></span> 你好呀，欢迎来到我的小站</span>
+
+        <h1 id="heroTitle">
+          嗨，我是<br>
+          <span class="gradient-text">林小满</span><span class="wave" aria-hidden="true">👋</span><br>
+          <span class="hero-line-3">把想法<span class="underline-squiggle">变成作品</span>的人</span>
+        </h1>
+
+        <!-- 修改这里：一句话自我介绍 -->
+        <p class="hero-desc">
+          一名<span class="hl">产品设计师</span> &amp; <span class="hl hl-2">前端开发者</span>。
+          喜欢把复杂的东西做得简单，把普通的东西做得有点可爱。
+          目前一边做产品，一边收集生活里的小灵感。
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#works">看看我的作品 <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#contact">联系我 <span aria-hidden="true">✉</span></a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat"><strong>5<span>+</span></strong><span>年设计开发经验</span></div>
+          <div class="stat"><strong>32</strong><span>个上线项目</span></div>
+          <div class="stat"><strong>∞</strong><span>杯咖啡</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art hero-enter" aria-hidden="true">
+        <div class="art-orbit orbit-1"></div>
+        <div class="art-orbit orbit-2"></div>
+        <div class="art-card">
+          <div class="art-avatar">满</div>
+          <div class="art-name">Lin Xiaoman</div>
+          <div class="art-role">Designer · Developer</div>
+          <div class="art-chips">
+            <span>🎨 设计</span><span>💻 代码</span><span>✨ 灵感</span>
+          </div>
+        </div>
+        <div class="float-chip chip-1">✦ 正在做新东西</div>
+        <div class="float-chip chip-2">☕ 咖啡续命中</div>
+        <div class="float-chip chip-3">🌈 今天也要开心</div>
+        <span class="art-spark spark-1">✳</span>
+        <span class="art-spark spark-2">✦</span>
+        <span class="art-spark spark-3">✳</span>
+      </div>
+    </section>
+
+    <!-- 跑马灯分隔条 -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>设计 ✦ 代码 ✦ 灵感 ✦ 咖啡 ✦ 好奇心 ✦ 一点点固执 ✦ </span>
+        <span>设计 ✦ 代码 ✦ 灵感 ✦ 咖啡 ✦ 好奇心 ✦ 一点点固执 ✦ </span>
+      </div>
+    </div>
+
+    <!-- ============ 关于我 ============ -->
+    <section class="section section-shell" id="about" aria-labelledby="aboutTitle">
+      <div class="section-head reveal">
+        <span class="eyebrow">01 / ABOUT ME</span>
+        <h2 id="aboutTitle">关于<span class="gradient-text">我</span></h2>
+        <p>几件关于我的小事</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass-card about-main reveal">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <!-- 修改这里：详细的自我介绍 -->
+          <p class="about-lead">我相信好的设计不是加得更多，而是<strong>减去不该存在的部分</strong>。</p>
+          <p>过去几年，我在团队里负责从概念到上线的完整链路：画原型、做视觉、写前端、跟数据。
+             比起某一个头衔，我更喜欢"把事情做成"的感觉。</p>
+          <p>工作之外，我会拍拍街景、捣鼓些没什么用的小工具、认真研究哪家咖啡好喝。
+             如果这些听起来跟你合得来，欢迎找我聊聊。</p>
+          <div class="about-sign">
+            <span class="sign-line"></span>
+            <span>林小满 / Xiaoman Lin</span>
+            <span class="sign-emoji">🌿</span>
+          </div>
+        </div>
+
+        <div class="about-side">
+          <div class="mini-card reveal" style="--mc1:#7C5CFC;--mc2:#B18CFF">
+            <div class="mini-icon">🎨</div>
+            <h3>设计</h3>
+            <p>产品体验、视觉系统、交互原型，在意每一个像素的脾气。</p>
+          </div>
+          <div class="mini-card reveal" style="--mc1:#FF6B9D;--mc2:#FFA26B">
+            <div class="mini-icon">💻</div>
+            <h3>代码</h3>
+            <p>把设计稿变成真的能点、能滑、能用的网页和应用。</p>
+          </div>
+          <div class="mini-card reveal" style="--mc1:#4ECDC4;--mc2:#38BDF8">
+            <div class="mini-icon">🌱</div>
+            <h3>生活</h3>
+            <p>散步、拍照、手冲咖啡，以及不定期冒出来的奇怪点子。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 技能 ============ -->
+    <section class="section section-shell" id="skills" aria-labelledby="skillsTitle">
+      <div class="section-head reveal">
+        <span class="eyebrow">02 / SKILLS</span>
+        <h2 id="skillsTitle">我会<span class="gradient-text gradient-cool">些什么</span></h2>
+        <p>工具会变，思路大体不变</p>
+      </div>
+
+      <div class="skill-groups">
+        <!-- 修改这里：按你的实际技能替换标签文字 -->
+        <div class="skill-group reveal">
+          <div class="skill-group-head"><span class="group-emoji">🖌️</span><h3>设计</h3><span class="group-line"></span></div>
+          <div class="skill-tags">
+            <span class="tag tag-purple">Figma</span><span class="tag tag-pink">交互原型</span>
+            <span class="tag tag-orange">设计系统</span><span class="tag tag-purple">用户研究</span>
+            <span class="tag tag-blue">动效设计</span><span class="tag tag-green">品牌视觉</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="skill-group-head"><span class="group-emoji">⌘</span><h3>开发</h3><span class="group-line"></span></div>
+          <div class="skill-tags">
+            <span class="tag tag-blue">HTML / CSS</span><span class="tag tag-green">JavaScript</span>
+            <span class="tag tag-purple">Vue</span><span class="tag tag-pink">React</span>
+            <span class="tag tag-orange">Tailwind</span><span class="tag tag-blue">Node.js</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="skill-group-head"><span class="group-emoji">🧰</span><h3>协作</h3><span class="group-line"></span></div>
+          <div class="skill-tags">
+            <span class="tag tag-orange">Git</span><span class="tag tag-green">需求分析</span>
+            <span class="tag tag-pink">项目推进</span><span class="tag tag-purple">文档写作</span>
+            <span class="tag tag-blue">数据分析</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 作品集 ============ -->
+    <section class="section section-shell" id="works" aria-labelledby="worksTitle">
+      <div class="section-head reveal">
+        <span class="eyebrow">03 / SELECTED WORKS</span>
+        <h2 id="worksTitle">做过<span class="gradient-text gradient-warm">的一些东西</span></h2>
+        <p>挑了几个比较喜欢的放在这里</p>
+      </div>
+
+      <div class="filter-bar reveal" role="group" aria-label="作品分类筛选">
+        <button class="filter-btn is-active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="design">设计</button>
+        <button class="filter-btn" data-filter="code">开发</button>
+        <button class="filter-btn" data-filter="fun">小实验</button>
+      </div>
+
+      <!-- 修改这里：每个 .work-card 就是一个作品，改标题/描述/标签/链接即可 -->
+      <div class="works-grid" id="worksGrid">
+        <article class="work-card reveal" data-category="design" style="--g1:#7C5CFC;--g2:#C86BFF;--g3:#FF8FB1">
+          <div class="work-thumb thumb-pattern-1">
+            <span class="thumb-emoji">🎨</span>
+            <span class="thumb-shape s1"></span><span class="thumb-shape s2"></span>
+            <span class="thumb-tag">设计系统</span>
+          </div>
+          <div class="work-body">
+            <span class="work-meta">2026 · 产品设计</span>
+            <h3>Petal 设计系统</h3>
+            <p>为一款笔记应用从零搭建的组件库与设计规范，覆盖 60+ 组件、深浅双主题。</p>
+            <div class="work-tags"><span>Figma</span><span>Design System</span></div>
+            <a class="work-link" href="#contact" aria-label="查看 Petal 设计系统详情">查看项目 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal" data-category="code" style="--g1:#4ECDC4;--g2:#38BDF8;--g3:#6C8BFF">
+          <div class="work-thumb thumb-pattern-2">
+            <span class="thumb-emoji">⚡</span>
+            <span class="thumb-shape s1"></span><span class="thumb-shape s2"></span>
+            <span class="thumb-tag">Web App</span>
+          </div>
+          <div class="work-body">
+            <span class="work-meta">2025 · 全栈开发</span>
+            <h3>小满待办</h3>
+            <p>一个轻到几乎没有存在感的待办工具，支持本地离线、键盘流操作和自然语言输入。</p>
+            <div class="work-tags"><span>Vue</span><span>IndexedDB</span></div>
+            <a class="work-link" href="#contact" aria-label="查看小满待办详情">查看项目 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal" data-category="design" style="--g1:#FFA26B;--g2:#FF6B9D;--g3:#FFD166">
+          <div class="work-thumb thumb-pattern-3">
+            <span class="thumb-emoji">📚</span>
+            <span class="thumb-shape s1"></span><span class="thumb-shape s2"></span>
+            <span class="thumb-tag">品牌视觉</span>
+          </div>
+          <div class="work-body">
+            <span class="work-meta">2025 · 品牌设计</span>
+            <h3>午后书店 · 视觉改造</h3>
+            <p>给一家独立书店做的新视觉：暖色系、手写感字体，还有一整套能贴在纸袋上的插画。</p>
+            <div class="work-tags"><span>Branding</span><span>Illustration</span></div>
+            <a class="work-link" href="#contact" aria-label="查看午后书店视觉改造详情">查看项目 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal" data-category="code" style="--g1:#6C8BFF;--g2:#9D7BFF;--g3:#F07BFF">
+          <div class="work-thumb thumb-pattern-4">
+            <span class="thumb-emoji">📊</span>
+            <span class="thumb-shape s1"></span><span class="thumb-shape s2"></span>
+            <span class="thumb-tag">数据可视化</span>
+          </div>
+          <div class="work-body">
+            <span class="work-meta">2024 · 前端开发</span>
+            <h3>城市呼吸地图</h3>
+            <p>把一整年的空气质量数据画成会动的时间轴，一眼就能看出这座城市什么时候在深呼吸。</p>
+            <div class="work-tags"><span>D3.js</span><span>Canvas</span></div>
+            <a class="work-link" href="#contact" aria-label="查看城市呼吸地图详情">查看项目 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal" data-category="fun" style="--g1:#FFD166;--g2:#FF8A5B;--g3:#FF6B9D">
+          <div class="work-thumb thumb-pattern-5">
+            <span class="thumb-emoji">🫧</span>
+            <span class="thumb-shape s1"></span><span class="thumb-shape s2"></span>
+            <span class="thumb-tag">小实验</span>
+          </div>
+          <div class="work-body">
+            <span class="work-meta">2024 · 创意编程</span>
+            <h3>会呼吸的泡泡</h3>
+            <p>一个周末写完的网页玩具：点一下屏幕，泡泡会跟着鼠标飘，还会随音乐轻轻抖。</p>
+            <div class="work-tags"><span>Canvas</span><span>Web Audio</span></div>
+            <a class="work-link" href="#contact" aria-label="查看会呼吸的泡泡详情">查看项目 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal" data-category="fun" style="--g1:#43E97B;--g2:#4ECDC4;--g3:#38BDF8">
+          <div class="work-thumb thumb-pattern-6">
+            <span class="thumb-emoji">🌿</span>
+            <span class="thumb-shape s1"></span><span class="thumb-shape s2"></span>
+            <span class="thumb-tag">开源小工具</span>
+          </div>
+          <div class="work-body">
+            <span class="work-meta">2023 · 开源</span>
+            <h3>Plant Note</h3>
+            <p>给植物写的浇水提醒小工具，界面上只有一株会随时间长大的 SVG 小草。</p>
+            <div class="work-tags"><span>JavaScript</span><span>SVG</span></div>
+            <a class="work-link" href="#contact" aria-label="查看 Plant Note 详情">查看项目 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+
+      <p class="works-empty" id="worksEmpty" hidden>这个分类还没有作品，换个标签看看吧 🌈</p>
+    </section>
+
+    <!-- ============ 经历 ============ -->
+    <section class="section section-shell" id="journey" aria-labelledby="journeyTitle">
+      <div class="section-head reveal">
+        <span class="eyebrow">04 / JOURNEY</span>
+        <h2 id="journeyTitle">走过<span class="gradient-text gradient-cool">的路</span></h2>
+        <p>简单记一下，免得以后忘了</p>
+      </div>
+
+      <!-- 修改这里：按你的真实经历替换 -->
+      <ol class="timeline">
+        <li class="timeline-item reveal">
+          <span class="tl-dot" style="--dot1:#7C5CFC;--dot2:#FF6B9D"></span>
+          <span class="tl-year">2023 — 现在</span>
+          <div class="tl-content glass-card">
+            <h3>高级产品设计师 · 某互联网团队</h3>
+            <p>负责核心产品的体验设计与设计系统建设，顺手把前端也写了一半，和工程团队协作推进落地。</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal">
+          <span class="tl-dot" style="--dot1:#4ECDC4;--dot2:#38BDF8"></span>
+          <span class="tl-year">2021 — 2023</span>
+          <div class="tl-content glass-card">
+            <h3>前端开发工程师 · 一家小工作室</h3>
+            <p>从写页面到搭工程化，做了十几个从 0 到 1 的项目，也在那时候开始认真学设计。</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal">
+          <span class="tl-dot" style="--dot1:#FFD166;--dot2:#FF8A5B"></span>
+          <span class="tl-year">2017 — 2021</span>
+          <div class="tl-content glass-card">
+            <h3>数字媒体技术 · 本科</h3>
+            <p>第一次发现"写代码也能画画"，从此一发不可收拾。</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ 联系 ============ -->
+    <section class="section section-shell" id="contact" aria-labelledby="contactTitle">
+      <div class="contact-card reveal">
+        <div class="contact-deco" aria-hidden="true"><span>✳</span><span>✦</span><span>✳</span></div>
+        <span class="eyebrow eyebrow-light">05 / SAY HELLO</span>
+        <h2 id="contactTitle">一起做点<br><span>有意思的事？</span></h2>
+        <!-- 修改这里：换成你的邮箱 -->
+        <p>不管是项目合作、聊聊设计，还是单纯想打个招呼，都欢迎写信给我。<br>我通常会在一两天内回复 🌷</p>
+        <a class="btn btn-white" href="mailto:hello@example.com">给我发邮件 <span aria-hidden="true">✉</span></a>
+
+        <!-- 修改这里：把 # 换成你的主页链接 -->
+        <div class="social-row">
+          <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg><span>GitHub</span></a>
+          <a href="#" aria-label="掘金"><span class="social-emoji">💎</span><span>掘金</span></a>
+          <a href="#" aria-label="微博"><span class="social-emoji">🌐</span><span>微博</span></a>
+          <a href="#contact" aria-label="邮箱"><span class="social-emoji">✉️</span><span>邮箱</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner section-shell">
+      <div class="footer-brand"><span class="brand-mark">✦</span> 林小满<span class="brand-dot">.</span></div>
+      <!-- 修改这里：年份会自动更新，名字改掉即可 -->
+      <p>© <span id="year">2026</span> 林小满 · 用一点点 CSS 和很多咖啡做成 · 跑在我的平板上 🍃</p>
+      <a class="back-top" href="#top">回到顶部 ↑</a>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
